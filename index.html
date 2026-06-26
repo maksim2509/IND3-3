@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍽️ Обідній Вибір</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo">🍽️ <span>Обідній Вибір</span></div>
+    <div class="tagline">Бери що хочеш. Або нехай вирішить доля.</div>
+  </div>
+</header>
+<div class="layout">
+  <main class="menu-col">
+    <div class="section-label">Категорії</div>
+    <div id="category-list" class="cat-list"></div>
+    <div class="section-label" style="margin-top:24px">Меню</div>
+    <div id="dish-grid" class="dish-grid">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+  </main>
+  <aside class="sidebar">
+    <div class="panel roulette-panel">
+      <div class="panel-title">Не можете обрати?</div>
+      <div id="roulette-display" class="roulette-display">
+        <div class="roulette-idle">🎲</div>
+      </div>
+      <button id="random-btn" class="btn-roulette" onclick="spinRandom()">Вибрати за мене</button>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Ваш кошик</div>
+      <div id="cart-items" class="cart-items">
+        <div class="cart-empty">Нічого не обрано</div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Разом:</span>
+          <span id="cart-total" class="cart-total-num">0 грн</span>
+        </div>
+        <button id="order-btn" class="btn-order" onclick="submitOrder()" disabled>Замовити</button>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Замовлення</div>
+      <div id="order-history" class="order-history">
+        <div class="cart-empty">Ще немає замовлень</div>
+      </div>
+    </div>
+  </aside>
+</div>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
