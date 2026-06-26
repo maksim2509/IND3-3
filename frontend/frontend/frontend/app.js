@@ -1,5 +1,5 @@
 // ⬇️ ЗАМІНИТИ після деплою на Render
-const API_URL = "https://YOUR-APP.onrender.com";
+const API_URL = "https://lunch-site-backend-production.up.railway.app";
 
 let cart = new Map();
 let allDishes = [];
