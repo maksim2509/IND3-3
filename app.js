@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-APP.up.railway.app";
+const API_URL = "https://lunch-site-production.up.railway.app";
 
 let cart = new Map();
 let allDishes = [];
